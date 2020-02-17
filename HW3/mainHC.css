@@ -1,0 +1,149 @@
+/* For everyting not already specified */
+* {
+    font-family: 'Montserrat', sans-serif;
+    /*background: white;*/
+}
+
+/* Title and Logo of Webpage */
+
+h1 {
+    /* width: 100%;
+    height: 5%; */
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.8vw;
+}
+
+#logo {
+    width: 10%;
+    height: 10%;
+}
+
+/* Tracker at the top of webpage */
+
+/* #tracker {
+    height: 90%;
+    width:90%;
+} */
+
+.trackerheader{
+    padding-left: 9.5em;
+    padding-right: 5.5em;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-align: center;
+    border: none;
+}
+
+.trackerval{
+    padding-top: 1.3em;
+    padding-left: 9.5em;
+    padding-right: 5.5em;
+    font-weight: normal;
+    font-size: 1.8vw;
+    text-align: center;
+    color: blue;
+    border: none;
+}
+
+#moneysign {
+    color: green
+}
+
+/*Data Viz*/
+
+
+.chart{
+    justify-content: space-around;
+    margin: 0px;
+    overflow: auto;
+    display: inline-block;
+    width: 47%;
+    height: 500px;
+} 
+
+/*Table below charts */
+
+#OHTable {
+    border: 2px solid black;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#graycol {
+    background-color: lightgray;
+}
+
+#OHTitle {
+    font-size: 11px;
+    margin-bottom:-10px;
+}
+
+.OHHeader {
+    border: 2px solid black;
+    font-size: 1.3vw;
+}
+
+
+.OHBodyVals {
+    font-size: 1.2vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.OHTable th, td {
+    border: 2px solid black;
+
+}
+
+#OHFoot {
+    border: 2px solid black;
+}
+
+
+/* Order Form under table */
+
+#orderformdetails {
+    padding-top: 5%;
+    font-size: 1.3vw;
+    padding-left: 1%;
+    border: none;
+    padding-bottom: 5%;
+}
+
+#orderformdetails fieldset {
+    border: none;
+}
+#orderformdetails input {
+    margin-bottom: 1%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#orderformdetails input, button, label {
+    height: 2%;
+    width: 10%;
+    font-size: 1em;
+}
+
+.button-success,
+.button-error {
+    font-size: 13px;
+    margin-top: 15px;
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+}
+
+.button-success {
+    background: rgb(28, 184, 65);
+}
+
+.button-error {
+    background: rgb(202, 60, 60);
+}
+
+

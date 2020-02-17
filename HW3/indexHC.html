@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat%7CPaytone+One&display=swap" rel="stylesheet" />
+    <title>Dingus & Widget</title>
+    <link rel="stylesheet" type="text/css" href="mainHC.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+    <header>
+        <h1><img src="resources/images/dw-logo.png" alt="Dingus & Widget Logo" id="logo">Global Dashboard</h1>
+    </header>
+    <main>
+        <!--This is the top tracker portion of the webpage-->
+        <section>
+            <figure>
+                <table id="tracker">
+                    <thead>
+                    <tr id="trackerlabels">
+                        <th class="trackerheader">Dingus</th>
+                        <th class="trackerheader">Widget</th>
+                        <th class="trackerheader">Sales</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="trackervalues">
+                        <td class="trackerval" id="dingusval">0</td>
+                        <td class="trackerval" id="widgetval">0</td>
+                        <td class="trackerval" id="salesval"><span id="moneysign">$</span>0.00</td>
+                    </tr>
+                    </tbody>  
+                </table>
+            </figure>
+        </section>
+        <hr>
+        <!--This is the Data Viz portion of the webpage-->
+        <section class="data-viz">
+            <div class="chart">
+                <figure id="bar">
+                    <figcaption>Sales Per Day</figcaption>
+                </figure>
+            </div>
+            <div class="chart">
+                <figure id="pie">
+                        <figcaption>Total Sales Breakdown</figcaption>
+                </figure>
+            </div>        
+        </section>
+        <hr>
+        <!--This is the table portion of the webpage-->
+        <section>
+            <figure>
+                <table id="OHTable">
+                    <caption id="OHTitle"><h2>Order History</h2></caption>
+                    <colgroup>
+                        <col span="1" id="graycol">
+                        <col span="4">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th rowspan="2" class="OHHeader">ID#</th>
+                        <th rowspan="2" class="OHHeader">Date</th>
+                        <th colspan="2" class="OHHeader"> Quantity</th>
+                        <th rowspan="2" class="OHHeader">Total</th>
+                    </tr>
+                    <tr>
+                        <th class="OHHeader">Dingus</th>
+                        <th class="OHHeader">Widget</th>
+                    </tr>
+                    </thead>
+                    <tbody id="OHBody">
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" id="OHFoot">&#169; 2020 D&W Worldwide.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </figure>
+        </section>
+        <!-- This section is for the order form portion of the webpage-->
+        <script type="text/javascript" src="resources/scripts/hw3HC.js"></script>
+        <section>
+            <details id="orderformdetails">
+                <summary><b>Order Form</b></summary>
+                <form class="pure-form">
+                    <hr>
+                    <fieldset>
+                        <label for="dingus"> Dingus </label>
+                        <input id="dingus" type="number" min="0" name="dingus" value=0 required oninput="validity.valid||(value='');" onkeyup="updateTotal(this.value, true)">
+
+                        <label for="dunitprice">@</label>
+                        <input id="dunitprice" type="number" name="dingus unit price" value=14.25 disabled> 
+
+                        <label for="dtotal">= $</label>
+                        <input type="number" name="dingus total" id="dtotal" value=0.00 disabled> 
+                        
+                        <br /> 
+                        
+                        <label for="widget"> Widget </label>
+                        <input type="number" min="0" name="widget" id="widget" value=0 required oninput="validity.valid||(value='');" onkeyup="updateTotal(this.value, false)">
+                        
+                        <label for="wunitprice">@</label>
+                        <input type="number" name="widget unit price" id="wunitprice" value=9.99 disabled>  
+                        
+                        <label for="wtotal">= $</label>
+                        <input type="number" name="widget total" id="wtotal" value=0.00 disabled> 
+                        
+                        <br />
+                        
+                        <label for="total"> Total $</label>
+                        <input type="number" name="total" id="total" value=0.00 disabled>
+                        
+                        <br />
+                        
+                        <button type="button" class="button-error pure-button" onclick="clearForm();">Cancel</button>
+                        <button type="button" class="button-success pure-button" onclick="prepOrder();" disabled>Order</button>
+
+                    </fieldset>
+                </form>
+            </details>
+            
+        </section>
+    </main>
+</body>
+</html>
